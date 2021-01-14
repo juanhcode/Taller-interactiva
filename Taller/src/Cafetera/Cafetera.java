@@ -12,18 +12,46 @@ package Cafetera;
 public class Cafetera 
 {
     //atributos
-    public int capacidadMax;
-    public int capacidadMin;
-}
-    public Cafetera()
-    {
+    private int capacidadMax;
+    private int cantidad;
 
+    //Constructor por defecto
+    public Cafetera(){
+        this.capacidadMax = 1000;
+        cantidad = 0;
     }
 
-    public Cafetera(int Maxima, int Minima)
+    //Segundo Constructor
+    public Cafetera(int capacidadMaxima)
     {
-        CapacidadMax = Maxima;
-        CapacidadMin = Minima
+        this.capacidadMax = capacidadMaxima;
+        cantidad = capacidadMaxima;
+    }
+
+    //tercer costructor
+    public Cafetera(int capacidadMax,int cantidad) {
+        this.capacidadMax = capacidadMax;
+        if(cantidad > this.capacidadMax){
+            cantidad = capacidadMax;
+        }
+    }
+    
+    
+
+    public int getCapacidadMax() {
+        return capacidadMax;
+    }
+
+    public void setCapacidadMax(int capacidadMax) {
+        this.capacidadMax = capacidadMax;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
    
 
