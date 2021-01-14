@@ -53,6 +53,23 @@ public class Cafetera
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
+    
+    public void llenarCafetera()
+    {
+        cantidad = 1000;
+    }
+    public void servirTaza(int cantidad)
+    {
+        int calculo = (cantidad - servir);
+    }    
+        
+        
+        
+        
+        
+       
+        
+    }
    
 
  
