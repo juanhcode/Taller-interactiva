@@ -9,6 +9,24 @@ package Cafetera;
  *
  * @author Usuario
  */
-public class Cafetera {
-    
+public class Cafetera 
+{
+    //atributos
+    public int capacidadMax;
+    public int capacidadMin;
 }
+    public Cafetera()
+    {
+
+    }
+
+    public Cafetera(int Maxima, int Minima)
+    {
+        CapacidadMax = Maxima;
+        CapacidadMin = Minima
+    }
+   
+
+ 
+}
+
