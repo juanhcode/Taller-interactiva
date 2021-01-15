@@ -56,6 +56,24 @@ public class Cafetera
         this.cantidad = this.capacidadMax;
     }
     
+    public void llenartaza()
+    {
+    if(cantidad < capacidadMax)
+        {
+            int resultado = capacidadMax - cantidad;
+            System.out.println("cantidad de cafe en la taza: "+ cantidad);
+            System.out.println("cantidad de la cafetera: "+ resultado);
+          
+        }
+        else
+        {
+            int resultado2 = cantidad -= capacidadMax;
+            int vacio = 0; 
+            System.out.println("debido a la falta de cafe su taza tiene: "+ capacidadMax);
+            System.out.println("cantidad de cafe en la cafetera: "+ vacio);
+            
+        }
+    }
     
 }
   
