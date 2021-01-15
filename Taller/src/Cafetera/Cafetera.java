@@ -57,29 +57,22 @@ public class Cafetera {
 
     public void servirTaza(int taza) {
 
-        if (cantidad != 0 && cantidad >= taza) {
-            cantidad -= taza;
-        } else {
-            cantidad = 0;
+        if (cantidad != 0 && cantidad >= taza && taza > 0)
+        {   
+           cantidad -= taza;
+        System.out.println("la taza de cafe contiene: " + taza);
+        
         }
-
-        /*
-        if(cantidad < capacidadMax)
+        else if(cantidad < taza && taza > 0)
         {
-            int resultado = capacidadMax - cantidad;
-            System.out.println("cantidad de cafe en la taza: "+ cantidad);
-            System.out.println("cantidad de la cafetera: "+ resultado);
-          
+           
+            System.out.println("la taza de cafe contiene: " + cantidad);
+            vaciarCafetera(); 
         }
-        else
-        {
-            int resultado2 = cantidad -= capacidadMax;
-            int vacio = 0; 
-            System.out.println("debido a la falta de cafe su taza tiene: "+ capacidadMax);
-            System.out.println("cantidad de cafe en la cafetera: "+ vacio);
-            
+        else{
+            System.out.println("no puede aniadirse la cantidad deseada");
         }
-         */
+       
     }
 
     public void vaciarCafetera() {
