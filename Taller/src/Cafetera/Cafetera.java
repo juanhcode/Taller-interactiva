@@ -22,10 +22,10 @@ public class Cafetera
     }
 
     //Segundo Constructor
-    public Cafetera(int capacidadMaxima)
+    public Cafetera(int capacidadMax)
     {
-        //this.capacidadMax = capacidadMaxima;
-        cantidad = capacidadMaxima;
+        //this.capacidadMax = capacidadMax;
+        cantidad = this.capacidadMax;
     }
 
     //tercer costructor
