@@ -61,6 +61,7 @@ public class Cafetera
     public void servirTaza(int cantidad)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
     
             if (cantidad > capacidadMax){
             
@@ -99,6 +100,9 @@ public class Cafetera
             System.out.println("cantidad de cafe en la cafetera: "+ vacio);
             
         }
+=======
+        int calculo = (cantidad - servir);
+>>>>>>> 0d7c2b51f436c3df7e340ee731fca006ca81e54e
     }    
 >>>>>>> 071e6a65d947b302489791a9de7d07a55cf55322
         
