@@ -24,7 +24,7 @@ public class Cafetera
     //Segundo Constructor
     public Cafetera(int capacidadMax)
     {
-        //this.capacidadMax = capacidadMax;
+        this.capacidadMax = capacidadMax;
         cantidad = this.capacidadMax;
     }
 
@@ -81,7 +81,14 @@ public class Cafetera
     
     public void agregarCafetera(int cantidad)
     {
-        this.cantidad += cantidad;
+        int cantidad1 = 1000;
+        int suma = 0;
+        if(cantidad < getCapacidadMax()){
+             suma = this.cantidad += cantidad;
+        }
+        if(suma > cantidad1){
+            System.out.println("No se puede");
+        }
     }
     
 }

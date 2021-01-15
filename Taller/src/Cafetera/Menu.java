@@ -38,7 +38,7 @@ public class Menu {
             System.out.println("3.Vaciar Cafetera");
             System.out.println("4.Agregar cafe");
             System.out.println("5.Salir");
-            System.out.println("Digite una opcion");
+            System.out.println("Digite una opcion: ");
             opcion = consola.nextInt();
             switch(opcion){
                 case 1:
@@ -54,14 +54,23 @@ public class Menu {
                 case 4:
                     System.out.println("Introduzca la cantidad");
                     cantidad = consola.nextInt();
+                    cafe.agregarCafetera(cantidad);
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    /*
                     if(cantidad < cafe.getCapacidadMax()){
                         cafe.agregarCafetera(cantidad);
                         //System.out.println("La cantidad Actual es: " + cafe.getCantidad());
                     }
-                    if(cantidad > cafe.getCantidad()){
+                    
+                    if(cantidad > cafe.getCapacidadMax()){
                         System.out.println("No se puede agregar mas cafe");
                     }
-                    /*
                     else{
                         System.out.println("cantidad superior a la capacidad de la cafetera");
                     }
