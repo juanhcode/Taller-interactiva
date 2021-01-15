@@ -5,6 +5,8 @@
  */
 package Empresa;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Asus
@@ -14,8 +16,6 @@ public class Empleado {
     private String apellido;
     private String cc;
     private String direccion;
-    
-    
     
     private String anios_antiguedad;
     private String telefono;
@@ -33,6 +33,36 @@ public class Empleado {
         this.supervisor = supervisor;
     }
 
+    public Empleado(String nombre, String apellido, String cc, String direccion, String telefono, int salario) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.cc = cc;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.salario = salario;
+    }
+    
+    public void imprimir()
+    {
+        JOptionPane ventana = new JOptionPane();
+        ventana.showMessageDialog(ventana,"Nombre: " + getNombre() + "\n" 
+                                          + "Apellido: " + getApellido() + "\n"
+                                          + "C.C: " + getCc() + "\n"
+                                          + "Direccion: " + getDireccion() + "\n"
+                                          + "Telefono: " + getTelefono() + "\n"
+                                          + "Salario: " + getSalario()
+        );
+    }
+    
+    public void cambiarSupervisor(){
+        
+    }
+    
+    public void incrementarSalario(int nuevosalario){
+        this.salario += nuevosalario;
+    }
+    
+    
     public String getNombre() {
         return nombre;
     }

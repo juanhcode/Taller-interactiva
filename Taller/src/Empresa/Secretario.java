@@ -11,11 +11,14 @@ import Empresa.Empleado;
  *
  * @author Asus
  */
-public class Secretario extends Empleado{
+public class Secretario extends Empleado {
+
     private String despacho;
     private int numero_fax;
 
-    public Secretario(String despacho, int numero_fax, String nombre, String apellido, String cc, String direccion, String anios_antiguedad, String telefono, int salario, String supervisor) {
+    public Secretario(String despacho, int numero_fax, String nombre, String apellido, String cc, String direccion,
+            String anios_antiguedad, String telefono, int salario, String supervisor) 
+    {
         super(nombre, apellido, cc, direccion, anios_antiguedad, telefono, salario, supervisor);
         this.despacho = despacho;
         this.numero_fax = numero_fax;
@@ -36,9 +39,5 @@ public class Secretario extends Empleado{
     public void setNumero_fax(int numero_fax) {
         this.numero_fax = numero_fax;
     }
-    
-    
-    
 
-     
 }
