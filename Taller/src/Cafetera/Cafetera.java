@@ -24,7 +24,7 @@ public class Cafetera
     //Segundo Constructor
     public Cafetera(int capacidadMaxima)
     {
-        this.capacidadMax = capacidadMaxima;
+        //this.capacidadMax = capacidadMaxima;
         cantidad = capacidadMaxima;
     }
 
@@ -56,12 +56,32 @@ public class Cafetera
     
     public void llenarCafetera()
     {
-        cantidad = 1000;
+        this.cantidad = this.capacidadMax;
     }
     public void servirTaza(int cantidad)
     {
-        int calculo = (cantidad - servir);
-    }    
+    
+            if (cantidad > capacidadMax){
+            
+                vaciarCafetera();
+            }else
+                capacidadMax -= cantidad;
+         //
+    }
+    public void vaciarCafetera()
+    {
+        cantidad = 0;
+    }
+    
+    public void agregarCafetera(int cantidad)
+    {
+        this.cantidad = cantidad;
+    }
+    
+    
+    
+    
+    
         
         
         

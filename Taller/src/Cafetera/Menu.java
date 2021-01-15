@@ -18,7 +18,13 @@ public class Menu {
      */
     public static void main(String[] args) {
         boolean bandera = false;
+        int cantidad;
         Scanner consola = new Scanner(System.in);
+        Cafetera cafe = new  Cafetera();
+        Cafetera cafe1 = new  Cafetera(1000);
+        //Cafetera cafe2 = new  Cafetera(1000,cantidad);
+        
+        
         int opcion;
         while (bandera != true) {
             System.out.println("1.Llenar Cafetera");
@@ -30,6 +36,8 @@ public class Menu {
             opcion = consola.nextInt();
             switch(opcion){
                 case 1:
+                    cafe1.llenarCafetera();
+                    System.out.println("la capacidad maxima de la cafetera es" + cafe1.getCantidad());
                     break;
                 case 2:
                     break;
