@@ -35,9 +35,6 @@ public class Cafetera
             cantidad = capacidadMax;
         }
     }
-    
-    
-
     public int getCapacidadMax() {
         return capacidadMax;
     }
@@ -58,63 +55,5 @@ public class Cafetera
     {
         this.cantidad = this.capacidadMax;
     }
-    public void servirTaza(int cantidad)
-    {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-            if (cantidad > capacidadMax){
-            
-                vaciarCafetera();
-            }else
-                capacidadMax -= cantidad;
-         //
-    }
-    public void vaciarCafetera()
-    {
-        cantidad = 0;
-    }
-    
-    public void agregarCafetera(int cantidad)
-    {
-        this.cantidad = cantidad;
-    }
-    
-    
-    
-    
-    
-=======
-        if(cantidad < cafe)
-        {
-            resultado = cafe - cantidad;
-            System.out.println("cantidad de cafe en la taza: "+ cantidad);
-            System.out.println("cantidad de la cafetera: "+ resultado);
-          
-        }
-        else
-        {
-            resultado2 = cantidad -= cafe;
-            int vacio = 0; 
-            System.out.println("debido a la falta de cafe su taza tiene: "+ cafe);
-            System.out.println("cantidad de cafe en la cafetera: "+ vacio);
-            
-        }
-=======
-        int calculo = (cantidad - servir);
->>>>>>> 0d7c2b51f436c3df7e340ee731fca006ca81e54e
-    }    
->>>>>>> 071e6a65d947b302489791a9de7d07a55cf55322
-        
-        
-        
-        
-        
-       
-        
-    }
-   
-
- 
 }
-
+  
