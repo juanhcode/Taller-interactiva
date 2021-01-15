@@ -36,7 +36,7 @@ public class PruebaCafe {
         {
             resultado2 = cantidad -= cafe;
             int vacio = 0; 
-            System.out.println("debido a la falta de cafe su taza tiene: "+ cafe);
+            System.out.println("debido a la falta de cafe su taza tiene: "+ resultado2);
             System.out.println("cantidad de cafe en la cafetera: "+ vacio);
             
         }
