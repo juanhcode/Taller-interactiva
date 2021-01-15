@@ -42,8 +42,14 @@ public class Menu {
                 case 2:
                     break;
                 case 3:
+                    cafe.vaciarCafetera();
+                    System.out.println("La cantidad de la cafetera es:" + cafe.getCantidad());
                     break;
                 case 4:
+                    System.out.println("Introduzca la opcion");
+                    cantidad = consola.nextInt();
+                    cafe.agregarCafetera(cantidad);
+                    System.out.println("La cantidad Actual es: " + cafe.getCantidad());
                     break;
                 case 5:
                     bandera = true;
