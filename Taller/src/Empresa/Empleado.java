@@ -16,13 +16,14 @@ public class Empleado {
     private String apellido;
     private String cc;
     private String direccion;
+    private String cadena;
     
     private String anios_antiguedad;
     private String telefono;
-    private int salario;
+    private float salario;
     private String supervisor;
 
-    public Empleado(String nombre, String apellido, String cc, String direccion, String anios_antiguedad, String telefono, int salario, String supervisor) {
+    public Empleado(String nombre, String apellido, String cc, String direccion, String anios_antiguedad, String telefono, float salario, String supervisor) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cc = cc;
@@ -33,32 +34,36 @@ public class Empleado {
         this.supervisor = supervisor;
     }
 
-    public Empleado(String nombre, String apellido, String cc, String direccion, String telefono, int salario) {
+    public Empleado(String nombre, String apellido, String cc, String direccion, String telefono, float salario) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cc = cc;
         this.direccion = direccion;
         this.telefono = telefono;
         this.salario = salario;
+        this.anios_antiguedad = "0";
+        this.supervisor = "";
     }
     
     public void imprimir()
     {
         JOptionPane ventana = new JOptionPane();
-        ventana.showMessageDialog(ventana,"Nombre: " + getNombre() + "\n" 
+        ventana.showMessageDialog(ventana,cadena);
+    }
+    
+    public String getCadena(){
+        cadena = "Nombre: " + getNombre() + "\n" 
                                           + "Apellido: " + getApellido() + "\n"
                                           + "C.C: " + getCc() + "\n"
                                           + "Direccion: " + getDireccion() + "\n"
                                           + "Telefono: " + getTelefono() + "\n"
                                           + "Salario: " + getSalario()
-        );
+                                          + "Años Antiguedad" + getAnios_antiguedad();
+        return cadena;
     }
     
-    public void cambiarSupervisor(){
-        
-    }
     
-    public void incrementarSalario(int nuevosalario){
+    public void incrementarSalario(float nuevosalario){
         this.salario += nuevosalario;
     }
     
@@ -111,11 +116,11 @@ public class Empleado {
         this.telefono = telefono;
     }
 
-    public int getSalario() {
+    public float getSalario() {
         return salario;
     }
 
-    public void setSalario(int salario) {
+    public void setSalario(float salario) {
         this.salario = salario;
     }
 
@@ -123,7 +128,7 @@ public class Empleado {
         return supervisor;
     }
 
-    public void setSupervisor(String supervisor) {
+    public void cambiarSupervisor(String supervisor) {
         this.supervisor = supervisor;
     }
     

@@ -6,6 +6,7 @@
 package Empresa;
 
 import Empresa.Empleado;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,7 +18,7 @@ public class Secretario extends Empleado {
     private int numero_fax;
 
     public Secretario(String despacho, int numero_fax, String nombre, String apellido, String cc, String direccion,
-            String anios_antiguedad, String telefono, int salario, String supervisor) 
+            String anios_antiguedad, String telefono, float salario, String supervisor) 
     {
         super(nombre, apellido, cc, direccion, anios_antiguedad, telefono, salario, supervisor);
         this.despacho = despacho;
@@ -26,6 +27,12 @@ public class Secretario extends Empleado {
 
     public String getDespacho() {
         return despacho;
+    }
+    
+    public void imprimir1(){
+        JOptionPane ventana = new JOptionPane();
+        String cadenaCompleta = getCadena() + "\n" +"Despacho: " + getDespacho() + "\n" +"Numero_Fax:" + getNumero_fax();
+        ventana.showMessageDialog(ventana,cadenaCompleta);
     }
 
     public void setDespacho(String despacho) {

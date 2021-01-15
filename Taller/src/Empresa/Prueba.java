@@ -18,14 +18,15 @@ public class Prueba {
      */
     public static void main(String[] args) {
         Scanner consola = new Scanner(System.in);
-        int anio = consola.nextInt();
+        //int anio = consola.nextInt();
         
         
         Empleado empleado = new Empleado("Juan", "Hoyos","100690554","Calle 22","3138134783", 5000);
-        Secretario secretario = new Secretario("Hola",5,"Juan", "Hoyos","100690554","Calle 22","2","3138134783", 5000,"Juan");
-        empleado.incrementarSalario(700);
+        Secretario secretario = new Secretario("despacho",4,"Juan", "Hoyos","100690554","Calle 22","1","3138134783", 5000,"Supervisor");
+        secretario.getCadena();
+        secretario.imprimir1();
+        //empleado.incrementarSalario(700);
         //empleado.imprimir();
-        secretario.imprimir();
         
         
     }
