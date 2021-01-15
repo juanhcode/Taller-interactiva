@@ -42,7 +42,6 @@ public class Ejercicio1 {
             cifrado += aux;
             
         }
-        System.out.println("codigo desencriptado: " + mensaje);
     }
     
 }
