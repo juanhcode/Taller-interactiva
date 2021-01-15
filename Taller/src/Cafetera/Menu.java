@@ -46,6 +46,9 @@ public class Menu {
                     //System.out.println("la capacidad maxima de la cafetera es: " + cafe.getCapacidadMax());
                     break;
                 case 2:
+                    System.out.println("Introduzca la cantidad para servir");
+                    cantidad = consola.nextInt();
+                    cafe.servirTaza(cantidad);
                     break;
                 case 3:
                     cafe.vaciarCafetera();
@@ -55,12 +58,6 @@ public class Menu {
                     System.out.println("Introduzca la cantidad");
                     cantidad = consola.nextInt();
                     cafe.agregarCafetera(cantidad);
-                    
-                    
-                    
-                    
-                    
-                    
                     
                     /*
                     if(cantidad < cafe.getCapacidadMax()){

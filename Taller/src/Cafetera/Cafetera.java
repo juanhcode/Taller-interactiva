@@ -56,9 +56,17 @@ public class Cafetera
         this.cantidad = this.capacidadMax;
     }
     
-    public void servirTaza()
+    public void servirTaza(int taza)
     {
-    if(cantidad < capacidadMax)
+    
+        if (taza > cantidad){
+            vaciarCafetera();
+         }else
+         cantidad -= taza;
+        
+        
+        /*
+        if(cantidad < capacidadMax)
         {
             int resultado = capacidadMax - cantidad;
             System.out.println("cantidad de cafe en la taza: "+ cantidad);
@@ -73,6 +81,7 @@ public class Cafetera
             System.out.println("cantidad de cafe en la cafetera: "+ vacio);
             
         }
+        */
     }
      public void vaciarCafetera()
     {
@@ -81,14 +90,16 @@ public class Cafetera
     
     public void agregarCafetera(int cantidad)
     {
-        int cantidad1 = 1000;
-        int suma = 0;
-        if(cantidad < getCapacidadMax()){
-             suma = this.cantidad += cantidad;
-        }
-        if(suma > cantidad1){
-            System.out.println("No se puede");
-        }
+        
+        //Cuando la cantidad esta en 100 y quiero agregarle , no se puede sumar
+        //cuando vacio la cafetera y agrego mas de 1000 no puede permitirlo directo o por partes
+        
+            //this.cantidad += cantidad;
+            if(cantidad <= getCapacidadMax() && cantidad >= getCantidad()){
+                this.cantidad += cantidad;
+            }else{
+                System.out.println("No se puede");
+            }
     }
     
 }
