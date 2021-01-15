@@ -56,7 +56,7 @@ public class Cafetera
         this.cantidad = this.capacidadMax;
     }
     
-    public void llenartaza()
+    public void servirTaza()
     {
     if(cantidad < capacidadMax)
         {
