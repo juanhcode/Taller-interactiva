@@ -60,7 +60,21 @@ public class Cafetera
     }
     public void servirTaza(int cantidad)
     {
-        int calculo = (cantidad - servir);
+        if(cantidad < cafe)
+        {
+            resultado = cafe - cantidad;
+            System.out.println("cantidad de cafe en la taza: "+ cantidad);
+            System.out.println("cantidad de la cafetera: "+ resultado);
+          
+        }
+        else
+        {
+            resultado2 = cantidad -= cafe;
+            int vacio = 0; 
+            System.out.println("debido a la falta de cafe su taza tiene: "+ cafe);
+            System.out.println("cantidad de cafe en la cafetera: "+ vacio);
+            
+        }
     }    
         
         
