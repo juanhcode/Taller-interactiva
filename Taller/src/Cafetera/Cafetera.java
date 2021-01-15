@@ -74,6 +74,15 @@ public class Cafetera
             
         }
     }
+     public void vaciarCafetera()
+    {
+        cantidad = 0;
+    }
+    
+    public void agregarCafetera(int cantidad)
+    {
+        this.cantidad += cantidad;
+    }
     
 }
   
