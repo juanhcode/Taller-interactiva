@@ -20,6 +20,7 @@ public class Ejercicio1 {
         String mensaje;
         String cifrado = "";
         Scanner consola = new Scanner(System.in);
+        System.out.println("digite numero para cifrar: ");
         mensaje = consola.nextLine();
         
         for(int i = 0; i < mensaje.length();i++){
@@ -33,14 +34,8 @@ public class Ejercicio1 {
         mensaje += cifrado.charAt(3) + "";
         mensaje += cifrado.charAt(0) + "";
         mensaje += cifrado.charAt(1) + "";
-        System.out.println("codigo encriptado: " + mensaje);
+        System.out.println("numero cifrado: " + mensaje);
         
-        for(int i = 0; i < mensaje.length();i++){
-            int aux = mensaje.charAt(i) - '0';
-            aux += 8;
-            aux %= 9;
-            cifrado += aux;
-        }
     }
     
 }
