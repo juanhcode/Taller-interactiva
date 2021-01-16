@@ -40,7 +40,6 @@ public class Ejercicio1 {
             aux += 8;
             aux %= 9;
             cifrado += aux;
-            
         }
     }
     

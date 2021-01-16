@@ -43,8 +43,6 @@ public class Empleado {
         this.direccion = direccion;
         this.telefono = telefono;
         this.salario = salario;
-        this.anios_antiguedad = "0";
-        this.supervisor = "";
     }
     
     public void imprimir()
@@ -65,12 +63,19 @@ public class Empleado {
         return cadena;
     }
     
-    
-    public void incrementarSalario(double nuevosalario){
-        this.salario += nuevosalario;
+    public String cadenaPersonal(){
+        cadena = "Nombre: " + getNombre() + "\n" 
+                + "Apellido: " + getApellido() + "\n"
+                + "C.C: " + getCc() + "\n"
+                + "Direccion: " + getDireccion() + "\n"
+                + "Salario: " + getSalario() + "\n";
+        return cadena;
     }
     
     
+    public void incrementarSalario(double nuevosalario){
+        this.salario = nuevosalario;
+    }
     
     
     public String getNombre() {

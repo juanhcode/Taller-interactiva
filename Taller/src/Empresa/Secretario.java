@@ -25,15 +25,28 @@ public class Secretario extends Empleado {
         this.numero_fax = numero_fax;
     }
 
+    public Secretario(String nombre, String apellido, String cc, String direccion, String telefono, double salario) {
+        super(nombre, apellido, cc, direccion, telefono, salario);
+    }
+    
+  
     public String getDespacho() {
         return despacho;
     }
     
-    public void imprimir1(){
+    public void imprimirInformacionCompleta(){
         JOptionPane ventana = new JOptionPane();
         String cadenaCompleta = getCadena() + "\n" +"Despacho: " + getDespacho() + "\n" +"Numero_Fax:" + getNumero_fax();
         ventana.showMessageDialog(ventana,cadenaCompleta);
     }
+    
+    public void imprimirDatosPersonales(){
+        JOptionPane ventana = new JOptionPane();
+        String cadenaCompleta = cadenaPersonal()+ "\n" +"Puesto: " + "Secretario";
+        ventana.showMessageDialog(ventana,cadenaCompleta);
+    }
+
+    
 
     public void setDespacho(String despacho) {
         this.despacho = despacho;
