@@ -16,14 +16,15 @@ public class Empleado {
     private String apellido;
     private String cc;
     private String direccion;
-    private String cadena;
-    
+    private String cadena; //atributo auxliar , almacena toda la informacion del empleado
+   
     private String anios_antiguedad;
     private String telefono;
-    private float salario;
+    private double salario;
     private String supervisor;
 
-    public Empleado(String nombre, String apellido, String cc, String direccion, String anios_antiguedad, String telefono, float salario, String supervisor) {
+    //Informacion Completa
+    public Empleado(String nombre, String apellido, String cc, String direccion, String anios_antiguedad, String telefono, double salario, String supervisor) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cc = cc;
@@ -33,8 +34,9 @@ public class Empleado {
         this.salario = salario;
         this.supervisor = supervisor;
     }
-
-    public Empleado(String nombre, String apellido, String cc, String direccion, String telefono, float salario) {
+    
+    //Datos Principales
+    public Empleado(String nombre, String apellido, String cc, String direccion, String telefono, double salario) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cc = cc;
@@ -53,19 +55,22 @@ public class Empleado {
     
     public String getCadena(){
         cadena = "Nombre: " + getNombre() + "\n" 
-                                          + "Apellido: " + getApellido() + "\n"
-                                          + "C.C: " + getCc() + "\n"
-                                          + "Direccion: " + getDireccion() + "\n"
-                                          + "Telefono: " + getTelefono() + "\n"
-                                          + "Salario: " + getSalario()
-                                          + "Años Antiguedad" + getAnios_antiguedad();
+                + "Apellido: " + getApellido() + "\n"
+                + "C.C: " + getCc() + "\n"
+                + "Direccion: " + getDireccion() + "\n"
+                + "Años Antiguedad: " + getAnios_antiguedad() + "\n"
+                + "Telefono: " + getTelefono() + "\n"
+                + "Salario: " + getSalario() + "\n"
+                + "C.C. Supervisor: " + getSupervisor();
         return cadena;
     }
     
     
-    public void incrementarSalario(float nuevosalario){
+    public void incrementarSalario(double nuevosalario){
         this.salario += nuevosalario;
     }
+    
+    
     
     
     public String getNombre() {
@@ -116,11 +121,11 @@ public class Empleado {
         this.telefono = telefono;
     }
 
-    public float getSalario() {
+    public double getSalario() {
         return salario;
     }
 
-    public void setSalario(float salario) {
+    public void setSalario(double salario) {
         this.salario = salario;
     }
 
@@ -131,15 +136,4 @@ public class Empleado {
     public void cambiarSupervisor(String supervisor) {
         this.supervisor = supervisor;
     }
-    
-    
-    
-    
-
-   
-    
-    
-    
-    
-    
 }

@@ -17,18 +17,18 @@ public class Prueba {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Objetos
+        Secretario secretario = new Secretario("despacho", 4, "Emanuel", "Benjumea", "100690554", "Calle 32", "1", "3138134783", 4000, "Supervisor");
         Scanner consola = new Scanner(System.in);
-        //int anio = consola.nextInt();
-        
-        
-        Empleado empleado = new Empleado("Juan", "Hoyos","100690554","Calle 22","3138134783", 5000);
-        Secretario secretario = new Secretario("despacho",4,"Juan", "Hoyos","100690554","Calle 22","1","3138134783", 5000,"Supervisor");
-        secretario.getCadena();
-        secretario.imprimir1();
-        //empleado.incrementarSalario(700);
-        //empleado.imprimir();
-        
-        
+        System.out.println("Introduzca la cantidad de años transcurridos");
+        int anio_transcurrido = consola.nextInt();
+
+        double resultado = (anio_transcurrido * 0.05); // 0.25
+        double resultado_d = resultado * secretario.getSalario();
+        double resultado1 = resultado_d + secretario.getSalario();
+        secretario.imprimir1(); //Salario ACtual
+        secretario.incrementarSalario(resultado_d);
+        secretario.imprimir1(); //slario modificado
     }
-    
+
 }
