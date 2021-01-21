@@ -34,21 +34,10 @@ public class JefeDeZona extends Empleado {
         this.codigo_oficina = codigo_oficina;
     }
     
-    public void ImprimirInformacionCompleta(){
-        JOptionPane ventana = new JOptionPane();
-        String cadenaCompleta = getCadena() + "\n" + "Codigo Oficina: " + getCodigo_oficina() + "\n"
-                                                   + "C.C secretario: " + getCc_secretario() + "\n"
-                                                   + "C.C De los vendedores" + lista.toString() + "\n"
-                                                   + "Carro:" + "\n" 
-                                                   + "Marca: " +carro.getMarca() + "\n"
-                                                   + "Modelo: " +carro.getModelo() + "\n"
-                                                   + "Placa: " +carro.getPlaca() + "\n";
-        ventana.showMessageDialog(ventana,cadenaCompleta);
-    }
     
     public void imprimirDatosPersonales(){
         JOptionPane ventana = new JOptionPane();
-        String cadenaCompleta = cadenaPersonal()+ "\n" +"Salario: " + getSalario()
+        String cadenaCompleta = imprimir()+ "\n" +"Salario: " + getSalario()
                                             + "\n" +"Codigo De Oficina: " + getCodigo_oficina();
         ventana.showMessageDialog(ventana,cadenaCompleta);
     }

@@ -16,7 +16,6 @@ public class Empleado {
     private String apellido;
     private String cc;
     private String direccion;
-    private String cadena; //atributo auxliar , almacena toda la informacion del empleado
    
     private String anios_antiguedad;
     private String telefono;
@@ -45,32 +44,19 @@ public class Empleado {
         this.salario = salario;
     }
     
-    public void imprimir()
+    public String imprimir()
     {
-        JOptionPane ventana = new JOptionPane();
-        ventana.showMessageDialog(ventana,cadena);
-    }
-    
-    public String getCadena(){
-        cadena = "Nombre: " + getNombre() + "\n" 
-                + "Apellido: " + getApellido() + "\n"
-                + "C.C: " + getCc() + "\n"
-                + "Direccion: " + getDireccion() + "\n"
-                + "Años Antiguedad: " + getAnios_antiguedad() + "\n"
-                + "Telefono: " + getTelefono() + "\n"
-                + "Salario: " + getSalario() + "\n"
-                + "C.C. Supervisor: " + getSupervisor();
-        return cadena;
-    }
-    
-    public String cadenaPersonal(){
-        cadena = "Nombre: " + getNombre() + "\n" 
+        //JOptionPane ventana = new JOptionPane();
+        //ventana.showMessageDialog(ventana,
+        String texto =
+                "Nombre: " + getNombre() + "\n" 
                 + "Apellido: " + getApellido() + "\n"
                 + "C.C: " + getCc() + "\n"
                 + "Direccion: " + getDireccion() + "\n"
                 + "Salario: " + getSalario() + "\n";
-        return cadena;
+        return texto;
     }
+    
     
     
     public void incrementarSalario(double nuevosalario){

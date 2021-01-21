@@ -29,24 +29,16 @@ public class Secretario extends Empleado {
         super(nombre, apellido, cc, direccion, telefono, salario);
     }
     
-  
+    
     public String getDespacho() {
         return despacho;
     }
     
-    public void imprimirInformacionCompleta(){
-        JOptionPane ventana = new JOptionPane();
-        String cadenaCompleta = getCadena() + "\n" +"Despacho: " + getDespacho() + "\n" +"Numero_Fax:" + getNumero_fax();
-        ventana.showMessageDialog(ventana,cadenaCompleta);
-    }
-    
     public void imprimirDatosPersonales(){
         JOptionPane ventana = new JOptionPane();
-        String cadenaCompleta = cadenaPersonal()+ "\n" +"Puesto: " + "Secretario";
+        String cadenaCompleta = imprimir()+ "\n" +"Puesto: " + "Secretario";
         ventana.showMessageDialog(ventana,cadenaCompleta);
     }
-
-    
 
     public void setDespacho(String despacho) {
         this.despacho = despacho;

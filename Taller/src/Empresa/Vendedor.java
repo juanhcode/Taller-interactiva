@@ -36,23 +36,13 @@ public class Vendedor extends Empleado{
     }
     
     
-    public void imprimirInformacionCOmpleta(){
-        JOptionPane ventana = new JOptionPane();
-        String cadenaCompleta = getCadena() + "\n" +"Celular: " + getCelular()
-                                            + "\n" +"Area de Ventas: " + getArea_ventas()
-                                            + "\n" + "Porcentaje: " + getPorcentaje()
-                                            + "\n" + "Carro: " + getCarro().getMarca();
-        ventana.showMessageDialog(ventana,cadenaCompleta);
-    }
     
     public void imprimirDatosPersonales(){
         JOptionPane ventana = new JOptionPane();
-        String cadenaCompleta = cadenaPersonal()+ "\n" +"Puesto: " + PUESTO
+        String cadenaCompleta = imprimir()+ "\n" +"Puesto: " + PUESTO
                                             + "\n" +"Area de Ventas: " + getArea_ventas();
         ventana.showMessageDialog(ventana,cadenaCompleta);
     }
-    
-    
     
     public String getCelular() {
         return celular;
