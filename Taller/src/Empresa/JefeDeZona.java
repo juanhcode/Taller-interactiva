@@ -37,8 +37,7 @@ public class JefeDeZona extends Empleado {
     
     public void imprimirDatosPersonales(){
         JOptionPane ventana = new JOptionPane();
-        String cadenaCompleta = imprimir()+ "\n" +"Salario: " + getSalario()
-                                            + "\n" +"Codigo De Oficina: " + getCodigo_oficina();
+        String cadenaCompleta = imprimir() + "\n" +"Codigo De Oficina: " + getCodigo_oficina();
         ventana.showMessageDialog(ventana,cadenaCompleta);
     }
  
